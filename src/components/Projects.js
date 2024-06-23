@@ -5,6 +5,7 @@ import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp"
 import FinalWar from "../assets/img/projects/FinalWar.png"
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png"
 import TacosProject from "../assets/img/projects/TacosProject.jpg"
+import Portfolio from "../assets/img/projects/Portfolio.png"
 
 
 
@@ -15,21 +16,29 @@ let projectImages = {
     "DoYouHaveABall": DoYouHaveABAll,
     "FinalWar": FinalWar,
     "LearningFromYou": LearningFromYou,
-    "TacosProject": TacosProject
+    "TacosProject": TacosProject,
+    "Portfolio": Portfolio
 };
 
 const projectsData = [
     {
-        title: "Social Media Platform",
-        link: "https://github.com/Rungrukuk/Social-Media",
-        image: projectImages["Social media"],
-        description: "Developed an advanced social media platform using Python/Django"
+        title: "Portfolio",
+        link: "https://github.com/Rungrukuk/Portfolio",
+        image: projectImages['Portfolio'],
+        description: "Used React for the first time to built Portfolio website"
     },
+
     {
         title: "Taco Selling Platform",
         link: "https://github.com/Rungrukuk/Spring-In-Action",
         image: TacosProject,
         description: "Engaged in Spring Boot learning through comprehensive study of \"Spring In Action\" literature."
+    },
+    {
+        title: "Social Media Platform",
+        link: "https://github.com/Rungrukuk/Social-Media",
+        image: projectImages["Social media"],
+        description: "Developed an advanced social media platform using Python/Django"
     },
     {
         title: "Mobile Game",
@@ -49,18 +58,19 @@ const projectsData = [
         image: projectImages['FinalWar'],
         description: "Created this mobile game as part of a three-member team using Unity and C#."
     },
-    {
-        title: "Volunteer Project",
-        link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
-        image: PlaceholderImage,
-        description: "Developed an administrative panel for a volunteer's website using MySQL and PHP."
-    },
-    {
-        title: "Car Selling Website",
-        link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
-        image: PlaceholderImage,
-        description: "Developed a replica of a car selling platform using MySQL and PHP."
-    },
+
+    // {
+    //     title: "Volunteer Project",
+    //     link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
+    //     image: PlaceholderImage,
+    //     description: "Developed an administrative panel for a volunteer's website using MySQL and PHP."
+    // },
+    // {
+    //     title: "Car Selling Website",
+    //     link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
+    //     image: PlaceholderImage,
+    //     description: "Developed a replica of a car selling platform using MySQL and PHP."
+    // },
 ];
 
 
