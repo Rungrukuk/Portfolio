@@ -61,11 +61,37 @@
 }
 
 .about-me,
-.skills,
+.experience,
 .projects,
 .contact {
   height: auto;
 }
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.experience-item p {
+  margin: 5px 0;
+  font-style: italic;
+  color: #777;
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.experience-item li {
+  margin-bottom: 10px;
+}
+
 
 .section h2 {
   margin-top: 0;
@@ -170,4 +196,8 @@
 .project-box p {
   margin: 0;
   color: black;
+}
+
+.contact input {
+  margin: 0 0 1em 0;
 }

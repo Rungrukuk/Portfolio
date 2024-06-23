@@ -1,86 +1,77 @@
 import React, { forwardRef, useState } from 'react';
 
 import SocialMediaImage from "../assets/img/projects/SocialMedia.png"
+import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp"
+import FinalWar from "../assets/img/projects/FinalWar.png"
+import LearningFromYou from "../assets/img/projects/LearningFromYou.png"
+import TacosProject from "../assets/img/projects/TacosProject.jpg"
 
-const PlaceholderImage = "https://via.placeholder.com/150"
+
+
+const PlaceholderImage = "https://via.placeholder.com/50"
 
 let projectImages = {
     "Social media": SocialMediaImage,
-    "Mobile Game": PlaceholderImage,
-    // Add more projects as needed
+    "DoYouHaveABall": DoYouHaveABAll,
+    "FinalWar": FinalWar,
+    "LearningFromYou": LearningFromYou,
+    "TacosProject": TacosProject
 };
 
 const projectsData = [
     {
-        title: "Social media",
+        title: "Social Media Platform",
         link: "https://github.com/Rungrukuk/Social-Media",
         image: projectImages["Social media"],
-        description: "An advanced social media platform with real-time chat."
+        description: "Developed an advanced social media platform using Python/Django"
+    },
+    {
+        title: "Taco Selling Platform",
+        link: "https://github.com/Rungrukuk/Spring-In-Action",
+        image: TacosProject,
+        description: "Engaged in Spring Boot learning through comprehensive study of \"Spring In Action\" literature."
     },
     {
         title: "Mobile Game",
-        link: "https://play.google.com/store/apps/details?id=com.Brothevs.DoYouHaveABAll",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "A captivating mobile game with dynamic background lighting."
+        link: "https://www.youtube.com/watch?v=cyvl2kPsE3o&t=18s&ab_channel=BrothevsOfficial",
+        image: projectImages['DoYouHaveABall'],
+        description: "Single-handedly created a mobile game over four months using Unity and C#."
     },
     {
-        title: "Project 3",
-        link: "https://example.com/project3",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 3."
+        title: "Web/PC Game",
+        link: "https://rungrukuk.itch.io/learningfromu",
+        image: projectImages["LearningFromYou"],
+        description: "Collaborated in a Game Jam event to develop this game using Unity and C#."
     },
     {
-        title: "Project 4",
-        link: "https://example.com/project4",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 4."
+        title: "Mobile Game",
+        link: "https://www.youtube.com/watch?v=plcNi1XK2L8&ab_channel=BrothevsOfficial",
+        image: projectImages['FinalWar'],
+        description: "Created this mobile game as part of a three-member team using Unity and C#."
     },
     {
-        title: "Project 5",
-        link: "https://example.com/project5",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 5."
+        title: "Volunteer Project",
+        link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
+        image: PlaceholderImage,
+        description: "Developed an administrative panel for a volunteer's website using MySQL and PHP."
     },
     {
-        title: "Project 6",
-        link: "https://example.com/project6",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 6."
+        title: "Car Selling Website",
+        link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
+        image: PlaceholderImage,
+        description: "Developed a replica of a car selling platform using MySQL and PHP."
     },
-    {
-        title: "Project 7",
-        link: "https://example.com/project7",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 7."
-    },
-    {
-        title: "Project 8",
-        link: "https://example.com/project8",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 8."
-    },
-    {
-        title: "Project 9",
-        link: "https://example.com/project9",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 9."
-    },
-    {
-        title: "Project 10",
-        link: "https://example.com/project10",
-        image: "https://via.placeholder.com/150", // Add an image URL here
-        description: "Description for Project 10."
-    }
 ];
 
+
 const Projects = forwardRef((props, ref) => (
-    <div className="section projects" ref={ref}>
+    <div className="section projects" ref={ref} data-section={props['data-section']}>
         <h2>Projects</h2>
         <div className="projects-grid">
             {projectsData.map((project, index) => (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-box">
-                    <img src={project.image} alt={project.title} className="project-image" />
                     <h4>{project.title}</h4>
+                    <img src={project.image} alt={project.title} className="project-image" />
                     <p className="project-description">{project.description}</p>
                 </a>
             ))}

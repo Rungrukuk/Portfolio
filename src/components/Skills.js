@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skills = React.forwardRef((props, ref) => (
-    <div className="section skills" ref={ref}>
+    <div className="section skills" ref={ref} data-section={props['data-section']}>
         <h2>Skills</h2>
         <h4>Programming Languages:</h4>
         <p>Python, C#, Java, PHP, HTML, CSS, JavaScript</p>

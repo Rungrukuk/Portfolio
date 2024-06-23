@@ -1,14 +1,14 @@
 import React from 'react';
 
 const Education = React.forwardRef((props, ref) => (
-    <div className="section education" ref={ref}>
+    <div className="section education" ref={ref} data-section={props['data-section']}>
         <h2>Education</h2>
         <div className="education-item">
             <h4>Computer Security Master - Azerbaijan Technical University</h4>
             <p>09.2023 - Present</p>
             <ul>
                 <li>
-                    Related Coursework: Introduction to Cybersecurity, Information security management systems, Statistical experiment design and data analysis, Artificial intelligence methods, Legal aspects of information security, Cryptology, Security of cloud technologies, Ethical hacking methods, Network security
+                    Related Coursework: Introduction to Cybersecurity, Artificial intelligence methods, Legal aspects of information security, Cryptology, Security of cloud technologies, Ethical hacking methods, Network security
                 </li>
             </ul>
         </div>
