@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style/Experience.css'
 
 const Experience = React.forwardRef((props, ref) => (
     <div className="section experience" ref={ref} data-section={props['data-section']}>

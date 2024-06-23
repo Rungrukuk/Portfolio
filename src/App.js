@@ -7,6 +7,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
+import Footer from './components/Footer';
 
 function App() {
   const [selectedSection, setSelectedSection] = useState('about');
@@ -17,17 +18,17 @@ function App() {
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
 
-  const refs = {
+  const refs = React.useMemo(() => ({
     about: aboutRef,
     experience: experienceRef,
     education: educationRef,
     skills: skillsRef,
     projects: projectsRef,
     contact: contactRef,
-  };
+  }), [aboutRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef]);
 
   const handleScrollTo = (ref, section) => {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
+    ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
@@ -39,8 +40,8 @@ function App() {
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
+        const section = entry.target.getAttribute('data-section');
         if (entry.isIntersecting) {
-          const section = entry.target.getAttribute('data-section');
           setSelectedSection(section);
         }
       });
@@ -51,49 +52,65 @@ function App() {
     const sections = Object.values(refs).map((ref) => ref.current);
 
     sections.forEach((section) => {
-      observer.observe(section);
+      if (section) {
+        observer.observe(section);
+      }
     });
+
+    const handleScroll = () => {
+      if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1)) {
+        setSelectedSection('contact');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
       sections.forEach((section) => {
-        observer.unobserve(section);
+        if (section) {
+          observer.unobserve(section);
+        }
       });
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [refs]);
 
   return (
-    <div className="container">
-      <Navbar
-        selectedSection={selectedSection}
-        handleScrollTo={handleScrollTo}
-        refs={refs}
-      />
-      <div className="main-content">
-        <div ref={aboutRef} data-section="about">
-          <About />
-        </div>
-        <hr />
-        <div ref={experienceRef} data-section="experience">
-          <Experience />
-        </div>
-        <hr />
-        <div ref={educationRef} data-section="education">
-          <Education />
-        </div>
-        <hr />
-        <div ref={skillsRef} data-section="skills">
-          <Skills />
-        </div>
-        <hr />
-        <div ref={projectsRef} data-section="projects">
-          <Projects />
-        </div>
-        <hr />
-        <div ref={contactRef} data-section="contact">
-          <Contact />
+    <>
+      <div className="container">
+        <Navbar
+          selectedSection={selectedSection}
+          handleScrollTo={handleScrollTo}
+          refs={refs}
+        />
+        <div className="main-content">
+          <div ref={aboutRef} data-section="about">
+            <About scrollToSection={handleScrollTo} />
+          </div>
+          <hr />
+          <div ref={experienceRef} data-section="experience">
+            <Experience scrollToSection={handleScrollTo} />
+          </div>
+          <hr />
+          <div ref={educationRef} data-section="education">
+            <Education scrollToSection={handleScrollTo} />
+          </div>
+          <hr />
+          <div ref={skillsRef} data-section="skills">
+            <Skills scrollToSection={handleScrollTo} />
+          </div>
+          <hr />
+          <div ref={projectsRef} data-section="projects">
+            <Projects scrollToSection={handleScrollTo} />
+          </div>
+          <hr />
+          <div ref={contactRef} data-section="contact">
+            <Contact scrollToSection={handleScrollTo} />
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

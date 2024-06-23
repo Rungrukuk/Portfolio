@@ -1,14 +1,15 @@
 import React from 'react';
+import '../style/About-me.css'
 
 const About = React.forwardRef((props, ref) => (
     <div className="section about-me" ref={ref} data-section={props['data-section']}>
         <h2>About me</h2>
         <p> Hi There!
-            My name is Kamal Azizov, born on October 17, 2002, in Sumgait, Azerbaijan. I am passionate about coding and have been immersed in the world of programming since 2018. With a robust background in game development, I have three years of experience in this field and have successfully created three full games with Unity Engine.
+            My name is Kamal Azizov, born and living in Sumgait, Azerbaijan. I am passionate about coding and have been immersed in the world of programming since 2018. With a robust background in game development, I have three years of experience in this field and currently, I am expanding my skill set by learning software engineering.
         </p>
         <p>
 
-            Currently, I am expanding my skill set by learning Java Spring Boot. My technical repertoire includes extensive work with Java, C#, Python, and PHP, through which I have developed numerous prototype projects.
+            My technical repertoire includes extensive work with Java, C#, Python, and PHP, through which I have developed numerous prototype projects such as "Social Media Platform" using Python/Django, "Car Selling Platform" using PHP, "Taco Selling Platform" using Java/Spring and numerous games using C#/Unity.
         </p>
         <p>
 

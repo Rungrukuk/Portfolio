@@ -1,0 +1,18 @@
+.experience {
+    height: auto;
+}
+
+.experience-item p {
+    font-style: italic;
+    color: #777;
+}
+
+.experience-item ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.experience-item li {
+    margin-bottom: 10px;
+}

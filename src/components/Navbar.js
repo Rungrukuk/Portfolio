@@ -1,6 +1,7 @@
 import React from 'react';
 import profileImage from "../assets/img/ProfileImg.jpg";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../style/Navbar.css'
 
 const Navbar = ({ selectedSection, handleScrollTo, refs }) => {
     return (

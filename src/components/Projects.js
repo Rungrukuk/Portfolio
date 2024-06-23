@@ -1,15 +1,14 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
+import '../style/Projects.css'
 
 import SocialMediaImage from "../assets/img/projects/SocialMedia.png"
 import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp"
 import FinalWar from "../assets/img/projects/FinalWar.png"
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png"
 import TacosProject from "../assets/img/projects/TacosProject.jpg"
-import Portfolio from "../assets/img/projects/Portfolio.png"
+// import Portfolio from "../assets/img/projects/Portfolio.png"
+import CarSellingPlatform from "../assets/img/projects/CarSellingPlatform.png"
 
-
-
-const PlaceholderImage = "https://via.placeholder.com/50"
 
 let projectImages = {
     "Social media": SocialMediaImage,
@@ -17,16 +16,17 @@ let projectImages = {
     "FinalWar": FinalWar,
     "LearningFromYou": LearningFromYou,
     "TacosProject": TacosProject,
-    "Portfolio": Portfolio
+    // "Portfolio": Portfolio,
+    "CarSellingPlatform": CarSellingPlatform
 };
 
 const projectsData = [
-    {
-        title: "Portfolio",
-        link: "https://github.com/Rungrukuk/Portfolio",
-        image: projectImages['Portfolio'],
-        description: "Used React for the first time to built Portfolio website"
-    },
+    // {
+    //     title: "Portfolio",
+    //     link: "https://github.com/Rungrukuk/Portfolio",
+    //     image: projectImages['Portfolio'],
+    //     description: "Used React for the first time to built Portfolio website"
+    // },
 
     {
         title: "Taco Selling Platform",
@@ -53,24 +53,17 @@ const projectsData = [
         description: "Collaborated in a Game Jam event to develop this game using Unity and C#."
     },
     {
+        title: "Car Selling Website",
+        link: "https://github.com/Rungrukuk/CarSellingPlatform",
+        image: projectImages["CarSellingPlatform"],
+        description: "Developed a replica of a car selling platform using MySQL and PHP."
+    },
+    {
         title: "Mobile Game",
         link: "https://www.youtube.com/watch?v=plcNi1XK2L8&ab_channel=BrothevsOfficial",
         image: projectImages['FinalWar'],
         description: "Created this mobile game as part of a three-member team using Unity and C#."
-    },
-
-    // {
-    //     title: "Volunteer Project",
-    //     link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
-    //     image: PlaceholderImage,
-    //     description: "Developed an administrative panel for a volunteer's website using MySQL and PHP."
-    // },
-    // {
-    //     title: "Car Selling Website",
-    //     link: "https://github.com/Rungrukuk/Internship/tree/main/VolunteerProject",
-    //     image: PlaceholderImage,
-    //     description: "Developed a replica of a car selling platform using MySQL and PHP."
-    // },
+    }
 ];
 
 
@@ -79,10 +72,12 @@ const Projects = forwardRef((props, ref) => (
         <h2>Projects</h2>
         <div className="projects-grid">
             {projectsData.map((project, index) => (
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-box">
-                    <h4>{project.title}</h4>
+                <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="project-box">
                     <img src={project.image} alt={project.title} className="project-image" />
-                    <p className="project-description">{project.description}</p>
+                    <div className="project-details">
+                        <h4>{project.title}</h4>
+                        <p className="project-description">{project.description}</p>
+                    </div>
                 </a>
             ))}
         </div>
