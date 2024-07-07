@@ -1,6 +1,5 @@
 .projects {
-    padding: 20px;
-    margin-bottom: 20px;
+    height: 100vh;
 }
 
 .projects-grid {
@@ -9,11 +8,10 @@
     gap: 20px;
     padding: 1em;
     overflow-y: auto;
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 110px);
 }
 
 .project-box {
-    border: 1px solid #0d6efd;
     padding: 20px;
     border-radius: 8px;
     background-color: #f9f9f9;
@@ -23,11 +21,12 @@
     text-align: center;
     height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .project-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgb(13 64 220 / 75%)
+    box-shadow: rgba(17, 59, 230, 0.4) 0px 2px 4px, rgba(35, 23, 202, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .project-image {

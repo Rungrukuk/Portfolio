@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useMemo } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -18,7 +18,7 @@ function App() {
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
 
-  const refs = React.useMemo(() => ({
+  const refs = useMemo(() => ({
     about: aboutRef,
     experience: experienceRef,
     education: educationRef,
@@ -27,15 +27,15 @@ function App() {
     contact: contactRef,
   }), [aboutRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef]);
 
-  const handleScrollTo = (ref, section) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+  const handleScrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: "auto" });
   };
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 1,
+      threshold: 0.8,
     };
 
     const observerCallback = (entries) => {
@@ -57,21 +57,12 @@ function App() {
       }
     });
 
-    const handleScroll = () => {
-      if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1)) {
-        setSelectedSection('contact');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
       sections.forEach((section) => {
         if (section) {
           observer.unobserve(section);
         }
       });
-      window.removeEventListener('scroll', handleScroll);
     };
   }, [refs]);
 
@@ -107,9 +98,9 @@ function App() {
           <div ref={contactRef} data-section="contact">
             <Contact scrollToSection={handleScrollTo} />
           </div>
+          <Footer />
         </div>
       </div>
-      <Footer />
     </>
   );
 }

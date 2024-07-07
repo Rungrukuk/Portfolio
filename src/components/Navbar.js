@@ -5,7 +5,7 @@ import '../style/Navbar.css'
 
 const Navbar = ({ selectedSection, handleScrollTo, refs }) => {
     return (
-        <div className="sidebar bg-dark text-white vh-100 position-fixed d-flex flex-column align-items-center py-3">
+        <div className="sidebar text-white vh-100 position-fixed d-flex flex-column align-items-center py-3">
             <div className="profile-picture mb-4">
                 <img src={profileImage} alt="Profile" className="profile-image rounded-circle border border-light" />
             </div>
