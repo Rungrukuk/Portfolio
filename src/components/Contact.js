@@ -53,7 +53,9 @@ export const Contact = () => {
         <div className="section contact" id="connect">
             <Row className="align-items-center">
                 <Col size={12}>
-                    <h2>Contact Me</h2>
+                    <div className='position-relative d-flex text-center mb-5'>
+                        <h2 className='text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0'>Contact Me</h2>
+                    </div>
                     {alert && <p className="text-danger mt-3">{alert}</p>}
                     <Form onSubmit={handleSubmit}>
                         <Row>

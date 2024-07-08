@@ -1,6 +1,6 @@
 .contact {
     height: 100vh;
-    background-color: #343a40;
+    display: grid;
 }
 
 .contact input {

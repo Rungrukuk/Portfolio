@@ -1,5 +1,7 @@
 .experience {
     height: 100vh;
+    display: grid;
+    align-items: center;
 }
 
 .experience-item p {

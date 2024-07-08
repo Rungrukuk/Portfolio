@@ -75,30 +75,28 @@ function App() {
           refs={refs}
         />
         <div className="main-content">
-          <div ref={aboutRef} data-section="about">
+          <div ref={aboutRef} data-section="about" className='bg-dark-1'>
             <About scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={experienceRef} data-section="experience">
+          <div ref={experienceRef} data-section="experience" className='bg-dark-2'>
             <Experience scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={educationRef} data-section="education">
+          <div ref={educationRef} data-section="education" className='bg-dark-1'>
             <Education scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={skillsRef} data-section="skills">
+          <div ref={skillsRef} data-section="skills" className='bg-dark-2'>
             <Skills scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={projectsRef} data-section="projects">
+          <div ref={projectsRef} data-section="projects" className='bg-dark-1'>
             <Projects scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={contactRef} data-section="contact">
+          <div ref={contactRef} data-section="contact" className='bg-dark-2'>
             <Contact scrollToSection={handleScrollTo} />
           </div>
-          <Footer />
+          <div className='bg-dark-1'>
+            <Footer />
+          </div>
+
         </div>
       </div>
     </>
