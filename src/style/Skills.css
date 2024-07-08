@@ -1,5 +1,28 @@
 .skills {
     height: 100vh;
     display: grid;
-    align-items: center;
+    text-align: justify;
+    background-size: cover;
+}
+
+.skills-item {
+    margin-bottom: 20px;
+}
+
+.skills-item p {
+    font-style: italic;
+    color: #777;
+}
+
+.divider {
+    border-bottom: 1px solid #777;
+    margin: 20px 0;
+}
+
+.skill-icons {
+    margin-bottom: 10px;
+}
+
+.skill-icons .mr-3 {
+    margin-right: 10px;
 }

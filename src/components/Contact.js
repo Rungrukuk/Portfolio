@@ -6,8 +6,7 @@ import '../style/Contact.css';
 
 export const Contact = () => {
     const formInitialDetails = {
-        firstName: '',
-        lastName: '',
+        fullName: '',
         email: '',
         phone: '',
         message: ''
@@ -27,14 +26,14 @@ export const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setAlert('');
-        if (!formDetails.firstName || !formDetails.email || !formDetails.message) {
+        if (!formDetails.fullName || !formDetails.email || !formDetails.message) {
             setAlert('Please make sure to fill First Name, Email and Message fields.');
             return;
         }
         setButtonText("Sending...");
         var templateParams = {
             to_name: 'Kamal',
-            from_name: formDetails.firstName + " " + formDetails.lastName,
+            from_name: formDetails.fullName,
             message: formDetails.message,
             email: formDetails.email,
             phone: formDetails.phone
@@ -53,29 +52,19 @@ export const Contact = () => {
         <div className="section contact" id="connect">
             <Row className="align-items-center">
                 <Col size={12}>
-                    <div className='position-relative d-flex text-center mb-5'>
-                        <h2 className='text-24 text-light opacity-4 text-uppercase fw-600 w-100 mb-0'>Contact Me</h2>
+                    <div className='mb-5'>
+                        <h2 className='text-19 opacity-4 text-uppercase fw-600 w-100 mb-0'>Contact Me</h2>
                     </div>
                     {alert && <p className="text-danger mt-3">{alert}</p>}
                     <Form onSubmit={handleSubmit}>
                         <Row>
                             <Col size={12} sm={6} className="px-1">
-                                <Form.Group controlId="formFirstName">
+                                <Form.Group controlId="formfullName">
                                     <Form.Control
                                         type="text"
-                                        value={formDetails.firstName}
+                                        value={formDetails.fullName}
                                         placeholder="First Name"
-                                        onChange={(e) => onFormUpdate('firstName', e.target.value)}
-                                    />
-                                </Form.Group>
-                            </Col>
-                            <Col size={12} sm={6} className="px-1">
-                                <Form.Group controlId="formLastName">
-                                    <Form.Control
-                                        type="text"
-                                        value={formDetails.lastName}
-                                        placeholder="Last Name"
-                                        onChange={(e) => onFormUpdate('lastName', e.target.value)}
+                                        onChange={(e) => onFormUpdate('fullName', e.target.value)}
                                     />
                                 </Form.Group>
                             </Col>
@@ -89,28 +78,16 @@ export const Contact = () => {
                                     />
                                 </Form.Group>
                             </Col>
-                            <Col size={12} sm={6} className="px-1">
-                                <Form.Group controlId="formPhone">
-                                    <Form.Control
-                                        type="tel"
-                                        value={formDetails.phone}
-                                        placeholder="Phone No."
-                                        onChange={(e) => onFormUpdate('phone', e.target.value)}
-                                    />
-                                </Form.Group>
-                            </Col>
-                            <Col size={12} className="px-1">
-                                <Form.Group controlId="formMessage">
-                                    <Form.Control
-                                        as="textarea"
-                                        rows="6"
-                                        value={formDetails.message}
-                                        placeholder="Message"
-                                        onChange={(e) => onFormUpdate('message', e.target.value)}
-                                    />
-                                </Form.Group>
-                                <button className="submit-button mt-3"><span>{buttonText}</span></button>
-                            </Col>
+                            <Form.Group size={12} sm={6} className="px-1" controlId="formMessage">
+                                <Form.Control
+                                    as="textarea"
+                                    rows="6"
+                                    value={formDetails.message}
+                                    placeholder="Message"
+                                    onChange={(e) => onFormUpdate('message', e.target.value)}
+                                />
+                            </Form.Group>
+                            <button className="submit-button mt-3"><span>{buttonText}</span></button>
                             {status.message && (
                                 <p className={status.success === false ? "text-danger mt-3" : "text-success mt-3"}>{status.message}</p>
                             )}

@@ -41,8 +41,12 @@ h6 {
   font-size: 4em !important;
 } */
 
-.text-important {
+.text-light-green {
   color: #20c997 !important;
+}
+
+.text-important {
+  color: #ae46ee !important;
 }
 
 /* Text Size */

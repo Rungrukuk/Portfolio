@@ -1,29 +1,29 @@
 .projects {
     height: 100vh;
+    overflow: hidden;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     gap: 20px;
-    padding: 1em;
-    margin-top: 2em;
     overflow-y: auto;
-    max-height: 100vh;
+    max-height: 100%;
+    padding: 1em;
 }
 
 .project-box {
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: #f9f9f9;
 }
 
 .project-box:hover {
@@ -33,19 +33,40 @@
 
 .project-image {
     width: 100%;
-    height: 150px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
-.project-box h4 {
+.project-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    text-align: start;
+}
+
+.project-details h4 {
     margin: 10px 0;
-    color: #333;
+    color: #1e90ff;
 }
 
 .project-description {
-    flex-grow: 1;
-    color: #666;
+    color: #ccc;
+    padding: 0 10px;
+}
+
+.technology-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technology-icon {
+    margin-right: 5px;
+    color: #1e90ff;
 }
 
 .project-link {

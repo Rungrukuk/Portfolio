@@ -1,7 +1,6 @@
 import React from 'react';
 import '../style/About.css';
 import { Row, Col } from "react-bootstrap";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import book1 from '../assets/img/books/book1.png'
 import book2 from '../assets/img/books/book2.png'
 import book3 from '../assets/img/books/book3.png'
@@ -17,7 +16,7 @@ const About = React.forwardRef((props, ref) => (
         <Row>
             <Col md={8}>
                 <div className='p-4'>
-                    <h3 className='text-white-50'>Hi There!  </h3>
+                    <h3 className='text-light-green'>Hi There!  </h3>
                     <br />
                     <p className='text-5 text-white-50'>
 
@@ -33,7 +32,7 @@ const About = React.forwardRef((props, ref) => (
             </Col>
             <Col md={4}>
                 <div className='p-3'>
-                    <h3 className='text-white-50'>Books I'm reading</h3>
+                    <h3 className='text-light-green'>Books I'm reading</h3>
                     <br />
                     <Row>
                         <Col xs={6} className="book-col">

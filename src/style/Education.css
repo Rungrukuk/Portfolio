@@ -1,10 +1,27 @@
 .education {
     height: 100vh;
     display: grid;
-    align-items: center;
+    text-align: justify;
+    background-size: cover;
+}
+
+.education-item {
+    margin-bottom: 20px;
 }
 
 .education-item p {
     font-style: italic;
     color: #777;
+}
+
+.institution-logo {
+    max-width: 100%;
+    height: auto;
+    width: 4em;
+    height: 4em;
+}
+
+.divider {
+    border-bottom: 1px solid #777;
+    margin: 20px 0;
 }
