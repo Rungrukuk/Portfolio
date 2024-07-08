@@ -63,7 +63,7 @@ export const Contact = () => {
                                     <Form.Control
                                         type="text"
                                         value={formDetails.fullName}
-                                        placeholder="First Name"
+                                        placeholder="Full Name"
                                         onChange={(e) => onFormUpdate('fullName', e.target.value)}
                                     />
                                 </Form.Group>
