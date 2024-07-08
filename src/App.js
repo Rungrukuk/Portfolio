@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect, useMemo } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './components/About';
@@ -18,7 +18,7 @@ function App() {
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
 
-  const refs = React.useMemo(() => ({
+  const refs = useMemo(() => ({
     about: aboutRef,
     experience: experienceRef,
     education: educationRef,
@@ -27,15 +27,15 @@ function App() {
     contact: contactRef,
   }), [aboutRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef]);
 
-  const handleScrollTo = (ref, section) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+  const handleScrollTo = (ref) => {
+    ref.current.scrollIntoView({ behavior: "auto" });
   };
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 1,
+      threshold: 0.8,
     };
 
     const observerCallback = (entries) => {
@@ -57,21 +57,12 @@ function App() {
       }
     });
 
-    const handleScroll = () => {
-      if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1)) {
-        setSelectedSection('contact');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
       sections.forEach((section) => {
         if (section) {
           observer.unobserve(section);
         }
       });
-      window.removeEventListener('scroll', handleScroll);
     };
   }, [refs]);
 
@@ -84,32 +75,30 @@ function App() {
           refs={refs}
         />
         <div className="main-content">
-          <div ref={aboutRef} data-section="about">
+          <div ref={aboutRef} data-section="about" className='bg-dark-1'>
             <About scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={experienceRef} data-section="experience">
+          <div ref={experienceRef} data-section="experience" className='bg-dark-2'>
             <Experience scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={educationRef} data-section="education">
+          <div ref={educationRef} data-section="education" className='bg-dark-1'>
             <Education scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={skillsRef} data-section="skills">
+          <div ref={skillsRef} data-section="skills" className='bg-dark-2'>
             <Skills scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={projectsRef} data-section="projects">
+          <div ref={projectsRef} data-section="projects" className='bg-dark-1'>
             <Projects scrollToSection={handleScrollTo} />
           </div>
-          <hr />
-          <div ref={contactRef} data-section="contact">
+          <div ref={contactRef} data-section="contact" className='bg-dark-2'>
             <Contact scrollToSection={handleScrollTo} />
           </div>
+          <div className='bg-dark-1'>
+            <Footer />
+          </div>
+
         </div>
       </div>
-      <Footer />
     </>
   );
 }

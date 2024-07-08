@@ -1,53 +1,218 @@
 .projects {
-    padding: 20px;
-    margin-bottom: 20px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
     gap: 20px;
-    padding: 1em;
     overflow-y: auto;
-    max-height: calc(100vh - 200px);
+    max-height: 100%;
+    padding: 1em;
 }
 
 .project-box {
-    border: 1px solid #0d6efd;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100%;
+    width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    color: #f9f9f9;
 }
 
 .project-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgb(13 64 220 / 75%)
+    box-shadow: rgba(17, 59, 230, 0.4) 0px 2px 4px, rgba(35, 23, 202, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .project-image {
     width: 100%;
-    height: 150px;
+    height: 120px;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
 }
 
-.project-box h4 {
+.project-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    text-align: start;
+}
+
+.project-details h4 {
     margin: 10px 0;
-    color: #333;
+    color: #1e90ff;
 }
 
 .project-description {
-    flex-grow: 1;
-    color: #666;
+    color: #ccc;
+    padding: 0 10px;
+}
+
+.technology-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technology-icon {
+    margin-right: 5px;
+    color: #1e90ff;
 }
 
 .project-link {
     text-decoration: none;
     color: inherit;
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-box {
+        padding: 5px;
+    }
+
+    .project-image {
+        height: 100px;
+    }
+
+    .project-details h4 {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .project-box {
+        padding: 7px;
+    }
+
+    .project-image {
+        height: 110px;
+    }
+
+    .project-details h4 {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .projects {
+        height: 100vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 22px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .projects {
+        height: 100vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 24px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
 }

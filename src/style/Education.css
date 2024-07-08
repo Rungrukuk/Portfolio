@@ -1,4 +1,133 @@
+.education {
+    height: 100vh;
+    display: grid;
+    text-align: justify;
+    background-size: cover;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
 .education-item p {
     font-style: italic;
     color: #777;
+}
+
+.institution-logo {
+    max-width: 100%;
+    height: auto;
+    width: 4em;
+    height: 4em;
+}
+
+.divider {
+    border-bottom: 1px solid #777;
+    margin: 20px 0;
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .education {
+        height: auto;
+        padding: 1em;
+    }
+
+    .institution-logo {
+        width: 3em;
+        height: 3em;
+    }
+
+    .education-item {
+        margin-bottom: 15px;
+    }
+
+    .divider {
+        margin: 15px 0;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .education {
+        height: auto;
+        padding: 1.5em;
+    }
+
+    .institution-logo {
+        width: 3.5em;
+        height: 3.5em;
+    }
+
+    .education-item {
+        margin-bottom: 18px;
+    }
+
+    .divider {
+        margin: 18px 0;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .education {
+        height: auto;
+        padding: 1.5em;
+    }
+
+    .institution-logo {
+        width: 4em;
+        height: 4em;
+    }
+
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .education {
+        height: 100vh;
+        padding: 2em;
+    }
+
+    .institution-logo {
+        width: 4em;
+        height: 4em;
+    }
+
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .education {
+        height: 100vh;
+        padding: 2em;
+    }
+
+    .institution-logo {
+        width: 4em;
+        height: 4em;
+    }
+
+    .education-item {
+        margin-bottom: 20px;
+    }
+
+    .divider {
+        margin: 20px 0;
+    }
 }
