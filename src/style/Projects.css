@@ -73,3 +73,146 @@
     text-decoration: none;
     color: inherit;
 }
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-box {
+        padding: 5px;
+    }
+
+    .project-image {
+        height: 100px;
+    }
+
+    .project-details h4 {
+        font-size: 16px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .project-box {
+        padding: 7px;
+    }
+
+    .project-image {
+        height: 110px;
+    }
+
+    .project-details h4 {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 15px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .projects {
+        height: auto;
+        padding: 1em 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .projects {
+        height: 100vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 22px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .projects {
+        height: 100vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        gap: 20px;
+    }
+
+    .project-box {
+        padding: 10px;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    .project-details h4 {
+        font-size: 24px;
+    }
+
+    .project-description {
+        font-size: 16px;
+    }
+}

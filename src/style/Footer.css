@@ -25,3 +25,85 @@
 .footer a:hover {
     color: #7bff47;
 }
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .footer {
+        height: auto;
+        padding: 10px;
+    }
+
+    .footer-content {
+        max-width: 100%;
+    }
+
+    .footer a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .footer {
+        height: auto;
+        padding: 15px;
+    }
+
+    .footer-content {
+        max-width: 95%;
+    }
+
+    .footer a {
+        margin: 0 7px;
+        font-size: 16px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .footer {
+        height: 20vh;
+        padding: 20px;
+    }
+
+    .footer-content {
+        max-width: 90%;
+    }
+
+    .footer a {
+        margin: 0 10px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .footer {
+        height: 20vh;
+        padding: 20px;
+    }
+
+    .footer-content {
+        max-width: 88%;
+    }
+
+    .footer a {
+        margin: 0 10px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .footer {
+        height: 20vh;
+        padding: 20px;
+    }
+
+    .footer-content {
+        max-width: 88%;
+    }
+
+    .footer a {
+        margin: 0 10px;
+    }
+}

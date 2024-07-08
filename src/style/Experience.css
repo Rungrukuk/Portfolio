@@ -18,3 +18,83 @@
 .experience-item li {
     margin-bottom: 10px;
 }
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .experience {
+        height: auto;
+        padding: 1em;
+    }
+
+    .experience-item ul {
+        padding-left: 15px;
+    }
+
+    .experience-item li {
+        margin-bottom: 8px;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .experience {
+        height: auto;
+        padding: 1.5em;
+    }
+
+    .experience-item ul {
+        padding-left: 18px;
+    }
+
+    .experience-item li {
+        margin-bottom: 9px;
+    }
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .experience {
+        height: auto;
+        padding: 2em;
+    }
+
+    .experience-item ul {
+        padding-left: 20px;
+    }
+
+    .experience-item li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .experience {
+        height: 100vh;
+        padding: 2em;
+    }
+
+    .experience-item ul {
+        padding-left: 20px;
+    }
+
+    .experience-item li {
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .experience {
+        height: 100vh;
+        padding: 2em;
+    }
+
+    .experience-item ul {
+        padding-left: 20px;
+    }
+
+    .experience-item li {
+        margin-bottom: 10px;
+    }
+}
