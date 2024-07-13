@@ -14,17 +14,27 @@
     color: #777;
 }
 
-.divider {
-    border-bottom: 1px solid #777;
-    margin: 20px 0;
-}
-
 .skill-icons {
     margin-bottom: 10px;
 }
 
 .skill-icons .mr-3 {
     margin-right: 10px;
+}
+
+.skills-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-col {
+    flex: 1;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.skills-col-item {
+    display: grid;
 }
 
 @media (max-width: 575.98px) {
@@ -41,12 +51,12 @@
         font-size: 14px;
     }
 
-    .divider {
-        margin: 15px 0;
-    }
-
     .skill-icons .mr-3 {
         margin-right: 5px;
+    }
+
+    .skills-row {
+        flex-direction: column;
     }
 }
 
@@ -64,12 +74,12 @@
         font-size: 15px;
     }
 
-    .divider {
-        margin: 18px 0;
-    }
-
     .skill-icons .mr-3 {
         margin-right: 8px;
+    }
+
+    .skills-row {
+        flex-direction: column;
     }
 }
 
@@ -87,19 +97,19 @@
         font-size: 16px;
     }
 
-    .divider {
-        margin: 20px 0;
-    }
-
     .skill-icons .mr-3 {
         margin-right: 10px;
+    }
+
+    .skills-row {
+        flex-direction: column;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .skills {
-        height: 100vh;
-        padding: 2em;
+        height: auto;
+        padding: 0;
     }
 
     .skills-item {
@@ -110,18 +120,18 @@
         font-size: 17px;
     }
 
-    .divider {
-        margin: 20px 0;
-    }
-
     .skill-icons .mr-3 {
         margin-right: 10px;
+    }
+
+    .skills-row {
+        flex-direction: column;
     }
 }
 
 @media (min-width: 1200px) {
     .skills {
-        height: 100vh;
+        height: auto;
         padding: 2em;
     }
 
@@ -131,10 +141,6 @@
 
     .skills-item p {
         font-size: 18px;
-    }
-
-    .divider {
-        margin: 20px 0;
     }
 
     .skill-icons .mr-3 {
