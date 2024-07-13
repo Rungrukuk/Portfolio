@@ -67,11 +67,21 @@
         width: 9em;
         height: 9em;
     }
+
+    .col-md-8 {
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .col-md-4 {
+        flex-shrink: 0;
+        width: 100%;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .about-me {
-        height: 100vh;
+        height: auto;
         display: grid;
     }
 
@@ -84,11 +94,21 @@
         width: 10em;
         height: 10em;
     }
+
+    .col-md-8 {
+        flex: 0 0 auto;
+        width: 60%;
+    }
+
+    .col-md-4 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
 }
 
 @media (min-width: 1200px) {
     .about-me {
-        height: 100vh;
+        height: auto;
         display: grid;
     }
 

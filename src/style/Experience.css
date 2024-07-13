@@ -66,8 +66,7 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .experience {
-        height: 100vh;
-        padding: 2em;
+        height: auto;
     }
 
     .experience-item ul {
@@ -81,7 +80,7 @@
 
 @media (min-width: 1200px) {
     .experience {
-        height: 100vh;
+        height: auto;
         padding: 2em;
     }
 

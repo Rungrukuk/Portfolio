@@ -46,11 +46,8 @@
 
 @media (max-width: 575.98px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid #000;
+        width: 0vh;
+        padding: 0%;
     }
 
     .menu {
@@ -69,11 +66,8 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-        border-right: none;
-        border-bottom: 1px solid #000;
+        width: 0vh;
+        padding: 0%;
     }
 
     .menu {
@@ -125,10 +119,13 @@
     }
 
     .menu-item {
-        padding: 10px;
         margin-bottom: 10px;
         text-align: center;
         font-size: 18px;
+    }
+
+    .section {
+        padding: 0;
     }
 }
 
