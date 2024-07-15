@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style/Skills.css';
 import { Row, Col } from "react-bootstrap";
 import { FaPython, FaJava, FaPhp, FaHtml5, FaCss3, FaJsSquare, FaDocker, FaLinux, FaGitAlt } from 'react-icons/fa';
-import { SiDjango, SiMysql, SiSqlite, SiMongodb, SiPostman, SiJupyter, SiUnity, SiUnrealengine, SiPandas, SiCsharp } from 'react-icons/si';
+import { SiDjango, SiMysql, SiSqlite, SiMongodb, SiPostman, SiJupyter, SiUnity, SiUnrealengine, SiPandas, SiCsharp, SiRabbitmq, SiApachekafka } from 'react-icons/si';
 import { getLeetCodeStats, getAllGitHubCommits } from '../fetchData';
 
 const Skills = React.forwardRef((props, ref) => {
@@ -98,6 +98,8 @@ const Skills = React.forwardRef((props, ref) => {
                                 <SiMongodb size={30} className='mr-3' />
                                 <FaGitAlt size={30} className='mr-3' />
                                 <FaDocker size={30} className='mr-3' />
+                                <SiApachekafka size={30} className='mr-3' />
+                                <SiRabbitmq size={30} className='mr-3' />
                                 <FaLinux size={30} className='mr-3' />
                                 <SiPostman size={30} className='mr-3' />
                                 <SiJupyter size={30} className='mr-3' />
@@ -105,7 +107,7 @@ const Skills = React.forwardRef((props, ref) => {
                                 <SiUnrealengine size={30} className='mr-3' />
                                 <SiPandas size={30} className='mr-3' />
                             </div>
-                            <p>Spring, Django, MySQL, SQL Lite, MongoDB, Git, Docker, Linux, Postman, Jupyter, Unity, Unreal Engine, Pandas</p>
+                            <p>Spring, Django, MySQL, SQL Lite, MongoDB, Git, Docker, Kafka, RabbitMQ, Linux, Postman, Jupyter, Unity, Unreal Engine, Pandas</p>
                         </div>
                         <div className="divider"></div>
                         <div className="skills-item skills-row">
