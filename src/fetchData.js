@@ -24,7 +24,7 @@ export const getLeetCodeStats = async (username) => {
     if (cachedData) return cachedData;
 
     try {
-        const response = await axios.get(`https://leetcode-stats-api.herokuapp.com/${username}`);
+        const response = await axios.get(`https://leetcode-stats.tashif.codes/${username}`);
         setCachedData(cacheKey, response.data);
         return response.data;
     } catch (error) {
