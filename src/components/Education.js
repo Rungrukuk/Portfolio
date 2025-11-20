@@ -15,7 +15,7 @@ const Education = React.forwardRef((props, ref) => (
                     <Row>
                         <Col md={10}>
                             <h4 className='text-light-green'>Computer Security Master @ Azerbaijan Technical University</h4>
-                            <p>09.2023 - Present</p>
+                            <p>09.2023 - 06.2025</p>
                             <ul className='text-5'>
                                 <li>Related Coursework: Introduction to Cybersecurity, Artificial intelligence methods, Legal aspects of information security, Cryptology, Security of cloud technologies, Ethical hacking methods, Network security</li>
                                 <li>Notable Project: Developed model of networking in online games utilizing RSA encryption to ensure the security of information.</li>
@@ -31,7 +31,7 @@ const Education = React.forwardRef((props, ref) => (
                     <Row>
                         <Col md={10}>
                             <h4 className='text-light-green'>Information Technologies (Eng) Bachelor @ Baku Engineering University</h4>
-                            <p>09.2019 - 05.2023</p>
+                            <p>09.2019 - 06.2023</p>
                             <ul className='text-5'>
                                 <li>Related Coursework: Object Oriented Programming, Internet Technologies, Web System Technologies, Modern Programming Languages, Computer Architecture, Data Structures and Algorithms, Computer Networks</li>
                                 <li>Extracurricular Activities: Participated in numerous hackathons and a renowned Turkish drone creation competition <span className='text-important'>Teknofest</span>, achieving a final placement of 5th.</li>
