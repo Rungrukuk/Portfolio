@@ -9,7 +9,6 @@ import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp";
 import FinalWar from "../assets/img/projects/FinalWar.png";
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png";
 import TacosProject from "../assets/img/projects/TacosProject.jpg";
-import CarSellingPlatform from "../assets/img/projects/CarSellingPlatform.png";
 import ECommerce from "../assets/img/projects/ECommerce.png";
 
 const projectsData = [
