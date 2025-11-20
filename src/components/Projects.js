@@ -10,8 +10,16 @@ import FinalWar from "../assets/img/projects/FinalWar.png";
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png";
 import TacosProject from "../assets/img/projects/TacosProject.jpg";
 import CarSellingPlatform from "../assets/img/projects/CarSellingPlatform.png";
+import ECommerce from "../assets/img/projects/ECommerce.png";
 
 const projectsData = [
+    {
+        title: "E-Commerce Platform",
+        link: "https://github.com/Rungrukuk/eCommerce",
+        image: ECommerce,
+        description: "Developed a microservice-architected E-Commerce platform using Springboot on Java",
+        technologies: ["Java", "Spring"]
+    },
     {
         title: "Taco Selling Platform",
         link: "https://github.com/Rungrukuk/Spring-In-Action",
@@ -39,13 +47,6 @@ const projectsData = [
         image: LearningFromYou,
         description: "Collaborated in a Game Jam event to develop this game using Unity and C#.",
         technologies: ["C#", "Unity"]
-    },
-    {
-        title: "Car Selling Website",
-        link: "https://github.com/Rungrukuk/CarSellingPlatform",
-        image: CarSellingPlatform,
-        description: "Developed a replica of a car selling platform using MySQL and PHP.",
-        technologies: ["PHP", "MySQL"]
     },
     {
         title: "Mobile Game",
