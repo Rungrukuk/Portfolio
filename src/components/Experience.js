@@ -12,7 +12,7 @@ const Experience = React.forwardRef((props, ref) => (
                 <div className='p-4 text-white-50'>
                     <div className="experience-item">
                         <h4 className='text-light-green'>Software Engineer @ MigrationPro</h4>
-                        <p>Baku | 06.2023 - Present</p>
+                        <p>Baku | 06.2023 - 08.2024</p>
                         <ul className='text-5'>
                             <li>Spearheaded the optimization initiative for the Shopify Product Exporter, transitioning from<span className='text-important'> Rest API to GraphQL</span>, resulting in a substantial performance enhancement ranging from 2 to 10 times</li>
                             <li>Executed unit and integration tests, fortifying the codebase's reliability while enhancing existing testing suites</li>
