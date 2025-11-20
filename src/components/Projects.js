@@ -16,7 +16,7 @@ const projectsData = [
         title: "E-Commerce Platform",
         link: "https://github.com/Rungrukuk/eCommerce",
         image: ECommerce,
-        description: "Developed a microservice-architected E-Commerce platform using Springboot on Java",
+        description: "Developed a microservice-architected E-Commerce platform using SpringBoot on Java",
         technologies: ["Java", "Spring"]
     },
     {
