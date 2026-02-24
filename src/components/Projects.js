@@ -9,13 +9,13 @@ import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp";
 import FinalWar from "../assets/img/projects/FinalWar.png";
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png";
 import TacosProject from "../assets/img/projects/TacosProject.jpg";
-import ECommerce from "../assets/img/projects/ECommerce.png";
+import Microservices from "../assets/img/projects/Microservices.png";
 
 const projectsData = [
     {
         title: "Microservices Platform",
         link: "https://github.com/Rungrukuk/Microservices-Platform",
-        image: ECommerce,
+        image: Microservices,
         description: "Developed a microservice-architected platform using SpringBoot on Java",
         technologies: ["Java", "Spring"]
     },
