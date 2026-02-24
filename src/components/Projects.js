@@ -13,10 +13,10 @@ import ECommerce from "../assets/img/projects/ECommerce.png";
 
 const projectsData = [
     {
-        title: "E-Commerce Platform",
-        link: "https://github.com/Rungrukuk/eCommerce",
+        title: "Microservices Platform",
+        link: "https://github.com/Rungrukuk/Microservices-Platform",
         image: ECommerce,
-        description: "Developed a microservice-architected E-Commerce platform using SpringBoot on Java",
+        description: "Developed a microservice-architected platform using SpringBoot on Java",
         technologies: ["Java", "Spring"]
     },
     {
