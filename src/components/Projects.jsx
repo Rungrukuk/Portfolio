@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import '../style/Projects.css';
-import { FaJava, FaPhp } from 'react-icons/fa';
-import { SiPython, SiHtml5, SiCss, SiJavascript, SiUnity, SiDjango, SiMysql, SiSharp, SiSpring, SiDocker, SiRsocket } from 'react-icons/si';
+import { FaJava } from 'react-icons/fa';
+import { SiPython, SiUnity, SiDjango, SiMysql, SiSharp, SiSpring, SiDocker, SiRsocket, SiRabbitmq, SiRedis, SiPostgresql} from 'react-icons/si';
 import { Row, Col } from "react-bootstrap";
 
 import SocialMediaImage from "../assets/img/projects/SocialMedia.png";
@@ -17,14 +17,14 @@ const projectsData = [
         link: "https://github.com/Rungrukuk/Reactive-Microservices-Platform",
         image: Microservices,
         description: "Developed a microservice-architected platform using SpringBoot on Java",
-        technologies: ["Java", "Spring", "RSocket", "Docker"]
+        technologies: ["Java", "Spring", "RSocket", "Postgre","Docker"]
     },
     {
         title: "Smart Clinic Platform",
         link: "https://github.com/Rungrukuk/Smart-clinic-management-system",
         image: SmartClinicPlatform,
         description: "Developed a Smart Clinic Platform as part of the course on Coursera.",
-        technologies: ["Java", "Spring", "Docker"]
+        technologies: ["Java", "Spring", "MySQL", "Docker"]
     }
     ,
     {
@@ -32,14 +32,14 @@ const projectsData = [
         link: "https://github.com/Rungrukuk/Spring-In-Action",
         image: TacosProject,
         description: "Engaged in Spring Boot learning through study of \"Spring In Action\" literature.",
-        technologies: ["Java", "Spring"]
+        technologies: ["Java", "Spring", "Rabbit"]
     },
     {
         title: "Social Media Platform",
         link: "https://github.com/Rungrukuk/Social-Media",
         image: SocialMediaImage,
         description: "Developed an advanced social media platform using Python/Django.",
-        technologies: ["Python", "Django"]
+        technologies: ["Python", "Django", "Redis"]
     },
     {
         title: "Mobile Game",
@@ -95,14 +95,6 @@ const TechnologyIcon = ({ technology }) => {
             return <SiPython size={24} className="technology-icon" />;
         case "Java":
             return <FaJava size={24} className="technology-icon" />;
-        case "PHP":
-            return <FaPhp size={24} className="technology-icon" />;
-        case "HTML":
-            return <SiHtml5 size={24} className="technology-icon" />;
-        case "CSS":
-            return <SiCss size={24} className="technology-icon" />;
-        case "JavaScript":
-            return <SiJavascript size={24} className="technology-icon" />;
         case "Unity":
             return <SiUnity size={24} className="technology-icon" />;
         case "Django":
@@ -117,6 +109,12 @@ const TechnologyIcon = ({ technology }) => {
             return <SiDocker size={24} className="technology-icon" />;
         case "RSocket":
             return <SiRsocket size={24} className="technology-icon" />;
+        case "Rabbit":
+            return <SiRabbitmq size={24} className="technology-icon" />;
+        case "Redis":
+            return <SiRedis size={24} className="technology-icon" />;
+        case "Postgre":
+            return <SiPostgresql size={24} className="technology-icon" />;
         default:
             return null;
     }
