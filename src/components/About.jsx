@@ -15,20 +15,53 @@ const About = React.forwardRef((props, ref) => (
         </div>
         <Row>
             <Col md={8}>
-                <div className='p-4'>
-                    <h3 className='text-light-green'>Hi There!</h3>
+                <div className="p-4">
+                    <h3 className="text-light-green">Hi There!</h3>
                     <br />
-                    <p className='text-5 text-white-50'>
-                        My name is <span className='text-important'>Kamal Azizov</span>, a Software Engineer based in Sumqayit, Azerbaijan, with an M.Sc. in Computer Security from Azerbaijan Technical University. My work centers on backend and microservices development, with a strong focus on reactive programming, distributed systems, and application security.
+
+                    <p className="text-5 text-white-50">
+                        I'm <span className="text-important">Kamal Azizov</span>, a software
+                        engineer from <span className="text-important">Sumqayit, Azerbaijan</span>.
+                        I enjoy building systems that are reliable, scalable, and secure.
+                        Understanding how software works beneath the surface has naturally
+                        drawn me toward backend engineering, distributed systems, and
+                        application security.
                     </p>
-                    <p className='text-5 text-white-50'>
-                        I specialize in building scalable, secure systems using <span className='text-important'>Java</span> and <span className='text-important'>Spring Boot</span>, including reactive architectures with Spring WebFlux and Project Reactor. My recent work includes designing a <span className='text-important'>Reactive Microservices Platform</span> with mTLS-secured inter-service communication, JWT-based authentication, and RBAC/CBAC authorization, as well as optimizing e-commerce data pipelines using <span className='text-important'>Python</span> and GraphQL at MigrationPro, where I improved performance by up to 10x.
+
+                    <p className="text-5 text-white-50">
+                        Most of my work revolves around the{" "}
+                        <span className="text-important">Java</span> ecosystem, particularly{" "}
+                        <span className="text-important">Spring Boot</span>,{" "}
+                        <span className="text-important">Spring WebFlux</span>, and reactive
+                        programming. I enjoy designing microservices, working with
+                        asynchronous architectures, and solving performance challenges.
+                        Whether I'm improving an existing application or designing one from
+                        scratch, my goal is always to write clean, maintainable code that
+                        can continue to evolve.
                     </p>
-                    <p className='text-5 text-white-50'>
-                        Beyond backend engineering, my background spans full-stack development, databases (PostgreSQL, MySQL, MongoDB, Redis), and messaging systems like Kafka and RabbitMQ. My master's thesis explored security-oriented improvements in microservice-based e-commerce applications, reflecting my ongoing interest in building systems that are both performant and secure.
+
+                    <p className="text-5 text-white-50">
+                        During my{" "}
+                        <span className="text-important">
+                            Master's in Computer Security
+                        </span>
+                        , I developed a strong interest in secure software design. That
+                        interest continues to shape the way I approach development, from
+                        authentication and authorization to secure communication between
+                        services and resilient system architecture.
                     </p>
-                    <p className='text-5 text-white-50'>
-                        Outside of engineering, I enjoy game development (three years of experience with Unity and C#), reading technical literature, and exploring new technologies. I'm always looking to grow — both as an engineer and in my understanding of the systems I build.
+
+                    <p className="text-5 text-white-50">
+                        I enjoy learning just as much as I enjoy building. Reading technical
+                        books, exploring new technologies, and creating personal projects
+                        help me grow as an engineer. Outside of backend development, I spent
+                        three years building games with{" "}
+                        <span className="text-important">Unity</span> and{" "}
+                        <span className="text-important">C#</span>, an experience that taught
+                        me to approach problems from different perspectives. For me,
+                        software engineering is about more than writing code. It is about
+                        understanding why systems work the way they do and continuously
+                        finding better ways to build them.
                     </p>
                 </div>
             </Col>
