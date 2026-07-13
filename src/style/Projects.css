@@ -13,8 +13,9 @@
 }
 
 .project-box {
+    position: relative;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     background-color: #333;
     display: flex;
     flex-direction: column;
@@ -22,23 +23,89 @@
     text-align: center;
     width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow:
+        rgba(0, 0, 0, 0.4) 0px 2px 4px,
+        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     color: #f9f9f9;
+    overflow: hidden;
 }
 
 .project-box:hover {
     transform: translateY(-10px);
-    box-shadow: rgba(17, 59, 230, 0.4) 0px 2px 4px, rgba(35, 23, 202, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow:
+        rgba(17, 59, 230, 0.4) 0px 2px 4px,
+        rgba(35, 23, 202, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.featured-project {
+    animation: featuredGlow 2.5s ease-in-out infinite;
+}
+
+.featured-project::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #00ffff,
+        #0066ff,
+        #8b00ff,
+        #ff0000
+    );
+    background-size: 400% 400%;
+    animation: rainbowBorder 6s linear infinite;
+    z-index: -2;
+}
+
+.featured-project::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 8px;
+    background: #333;
+    z-index: -1;
+}
+
+@keyframes rainbowBorder {
+    from {
+        background-position: 0% 50%;
+    }
+    to {
+        background-position: 400% 50%;
+    }
+}
+
+@keyframes featuredGlow {
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px rgba(0, 170, 255, 0.45),
+            0 0 20px rgba(140, 0, 255, 0.25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 255, 0.8),
+            0 0 40px rgba(255, 0, 255, 0.45);
+    }
 }
 
 .project-image {
     width: 100%;
-    height: 120px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: fill;
     border-radius: 8px 8px 0 0;
 }
 
 .project-details {
+    position: relative;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -46,6 +113,21 @@
     justify-content: space-between;
     padding: 10px 0;
     text-align: start;
+}
+
+.featured-project .project-details::before {
+    content: "LATEST";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: linear-gradient(45deg, #ff0080, #00d4ff);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
 }
 
 .project-details h4 {
@@ -90,7 +172,7 @@
     }
 
     .project-image {
-        height: 100px;
+        height: 160px;
     }
 
     .project-details h4 {
@@ -118,7 +200,7 @@
     }
 
     .project-image {
-        height: 110px;
+        height: 180px;
     }
 
     .project-details h4 {
@@ -146,7 +228,7 @@
     }
 
     .project-image {
-        height: 120px;
+        height: 200px;
     }
 
     .project-details h4 {
@@ -173,7 +255,7 @@
     }
 
     .project-image {
-        height: 120px;
+        height: 220px;
     }
 
     .project-details h4 {
@@ -200,7 +282,7 @@
     }
 
     .project-image {
-        height: 120px;
+        height: 220px;
     }
 
     .project-details h4 {

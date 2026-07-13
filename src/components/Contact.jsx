@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col, Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import '../style/Contact.css';
 
 export const Contact = () => {
@@ -38,7 +38,7 @@ export const Contact = () => {
             email: formDetails.email,
             phone: formDetails.phone
         };
-        emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams, process.env.REACT_APP_EMAILJS_USER_ID).then((response) => {
+        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams, import.meta.env.VITE_EMAILJS_USER_ID).then((response) => {
             setButtonText("Send");
             setFormDetails(formInitialDetails);
             setStatus({ success: true, message: 'Message sent successfully' });

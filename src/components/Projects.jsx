@@ -1,12 +1,12 @@
 import React, { forwardRef } from 'react';
 import '../style/Projects.css';
 import { FaJava, FaPhp } from 'react-icons/fa';
-import { SiPython, SiHtml5, SiCss3, SiJavascript, SiUnity, SiDjango, SiMysql, SiCsharp, SiSpring } from 'react-icons/si';
+import { SiPython, SiHtml5, SiCss, SiJavascript, SiUnity, SiDjango, SiMysql, SiSharp, SiSpring, SiDocker, SiRsocket } from 'react-icons/si';
 import { Row, Col } from "react-bootstrap";
 
 import SocialMediaImage from "../assets/img/projects/SocialMedia.png";
 import DoYouHaveABAll from "../assets/img/projects/DoYouHaveABall.webp";
-import FinalWar from "../assets/img/projects/FinalWar.png";
+import SmartClinicPlatform from "../assets/img/projects/SmartClinicPlatform.png";
 import LearningFromYou from "../assets/img/projects/LearningFromYou.png";
 import TacosProject from "../assets/img/projects/TacosProject.jpg";
 import Microservices from "../assets/img/projects/Microservices.png";
@@ -14,11 +14,19 @@ import Microservices from "../assets/img/projects/Microservices.png";
 const projectsData = [
     {
         title: "Microservices Platform",
-        link: "https://github.com/Rungrukuk/Microservices-Platform",
+        link: "https://github.com/Rungrukuk/Reactive-Microservices-Platform",
         image: Microservices,
         description: "Developed a microservice-architected platform using SpringBoot on Java",
-        technologies: ["Java", "Spring"]
+        technologies: ["Java", "Spring", "RSocket", "Docker"]
     },
+    {
+        title: "Smart Clinic Platform",
+        link: "https://github.com/Rungrukuk/Smart-clinic-management-system",
+        image: SmartClinicPlatform,
+        description: "Developed a Smart Clinic Platform as part of the course on Coursera.",
+        technologies: ["Java", "Spring", "Docker"]
+    }
+    ,
     {
         title: "Taco Selling Platform",
         link: "https://github.com/Rungrukuk/Spring-In-Action",
@@ -46,13 +54,6 @@ const projectsData = [
         image: LearningFromYou,
         description: "Collaborated in a Game Jam event to develop this game using Unity and C#.",
         technologies: ["C#", "Unity"]
-    },
-    {
-        title: "Mobile Game",
-        link: "https://www.youtube.com/watch?v=plcNi1XK2L8&ab_channel=BrothevsOfficial",
-        image: FinalWar,
-        description: "Created this mobile game as part of a three-member team using Unity and C#.",
-        technologies: ["C#", "Unity"]
     }
 ];
 
@@ -61,7 +62,7 @@ const Projects = forwardRef((props, ref) => (
         <h2 className='pl-4 text-19 opacity-4 text-uppercase fw-600 w-100 mb-0'>Projects</h2>
         <div className="projects-grid">
             {projectsData.map((project, index) => (
-                <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className="project-box">
+                <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className={`project-box ${index === 0 ? "featured-project" : ""}`}>
                     <img src={project.image} alt={project.title} className="project-image" />
                     <div className="project-details">
 
@@ -99,7 +100,7 @@ const TechnologyIcon = ({ technology }) => {
         case "HTML":
             return <SiHtml5 size={24} className="technology-icon" />;
         case "CSS":
-            return <SiCss3 size={24} className="technology-icon" />;
+            return <SiCss size={24} className="technology-icon" />;
         case "JavaScript":
             return <SiJavascript size={24} className="technology-icon" />;
         case "Unity":
@@ -109,9 +110,13 @@ const TechnologyIcon = ({ technology }) => {
         case "MySQL":
             return <SiMysql size={24} className="technology-icon" />;
         case "C#":
-            return <SiCsharp size={24} className="technology-icon" />;
+            return <SiSharp size={24} className="technology-icon" />;
         case "Spring":
             return <SiSpring size={24} className="technology-icon" />;
+        case "Docker":
+            return <SiDocker size={24} className="technology-icon" />;
+        case "RSocket":
+            return <SiRsocket size={24} className="technology-icon" />;
         default:
             return null;
     }

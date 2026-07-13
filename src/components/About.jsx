@@ -16,17 +16,19 @@ const About = React.forwardRef((props, ref) => (
         <Row>
             <Col md={8}>
                 <div className='p-4'>
-                    <h3 className='text-light-green'>Hi There!  </h3>
+                    <h3 className='text-light-green'>Hi There!</h3>
                     <br />
                     <p className='text-5 text-white-50'>
-
-                        My name is <span className='text-important'>Kamal Azizov</span>, born and living in Sumgait, Azerbaijan. I am passionate about coding and have been immersed in the world of programming since 2018. With a robust background in game development, I have three years of experience in this field and currently, I am expanding my skill set by learning software engineering.
+                        My name is <span className='text-important'>Kamal Azizov</span>, a Software Engineer based in Sumqayit, Azerbaijan, with an M.Sc. in Computer Security from Azerbaijan Technical University. My work centers on backend and microservices development, with a strong focus on reactive programming, distributed systems, and application security.
                     </p>
                     <p className='text-5 text-white-50'>
-                        My technical repertoire includes extensive work with Java, C#, Python, and PHP, through which I have developed numerous prototype projects such as "Social Media Platform" using <span className='text-important'>Python</span>/Django, "Taco Selling Platform" using <span className='text-important'>Java</span>/Spring, numerous games using <span className='text-important'>C#</span>/Unity and "Car Selling Platform" using <span className='text-important'>PHP</span>.
+                        I specialize in building scalable, secure systems using <span className='text-important'>Java</span> and <span className='text-important'>Spring Boot</span>, including reactive architectures with Spring WebFlux and Project Reactor. My recent work includes designing a <span className='text-important'>Reactive Microservices Platform</span> with mTLS-secured inter-service communication, JWT-based authentication, and RBAC/CBAC authorization, as well as optimizing e-commerce data pipelines using <span className='text-important'>Python</span> and GraphQL at MigrationPro, where I improved performance by up to 10x.
                     </p>
                     <p className='text-5 text-white-50'>
-                        In my free time, I enjoy playing video games, watching anime and movies, and playing the guitar. I am also an avid reader, currently delving into books on software engineering to further enhance my knowledge and skills in this domain.
+                        Beyond backend engineering, my background spans full-stack development, databases (PostgreSQL, MySQL, MongoDB, Redis), and messaging systems like Kafka and RabbitMQ. My master's thesis explored security-oriented improvements in microservice-based e-commerce applications, reflecting my ongoing interest in building systems that are both performant and secure.
+                    </p>
+                    <p className='text-5 text-white-50'>
+                        Outside of engineering, I enjoy game development (three years of experience with Unity and C#), reading technical literature, and exploring new technologies. I'm always looking to grow — both as an engineer and in my understanding of the systems I build.
                     </p>
                 </div>
             </Col>
