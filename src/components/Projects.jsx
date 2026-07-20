@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import '../style/Projects.css';
 import { FaJava } from 'react-icons/fa';
-import { SiPython, SiUnity, SiDjango, SiMysql, SiSharp, SiSpring, SiDocker, SiRsocket, SiRabbitmq, SiRedis, SiPostgresql} from 'react-icons/si';
+import { SiPython, SiUnity, SiDjango, SiMysql, SiSharp, SiSpring, SiDocker, SiRsocket, SiRabbitmq, SiRedis, SiPostgresql, SiApachekafka} from 'react-icons/si';
 import { Row, Col } from "react-bootstrap";
 
 import SocialMediaImage from "../assets/img/projects/SocialMedia.png";
@@ -17,7 +17,7 @@ const projectsData = [
         link: "https://github.com/Rungrukuk/Reactive-Microservices-Platform",
         image: Microservices,
         description: "Developed a microservice-architected platform using SpringBoot on Java",
-        technologies: ["Java", "Spring", "RSocket", "Postgre","Docker"]
+        technologies: ["Java", "Spring", "RSocket", "Postgre", "Redis", "Docker"]
     },
     {
         title: "Smart Clinic Platform",
@@ -32,7 +32,7 @@ const projectsData = [
         link: "https://github.com/Rungrukuk/Spring-In-Action",
         image: TacosProject,
         description: "Engaged in Spring Boot learning through study of \"Spring In Action\" literature.",
-        technologies: ["Java", "Spring", "Rabbit"]
+        technologies: ["Java", "Spring", "Rabbit", "Kafka"]
     },
     {
         title: "Social Media Platform",
@@ -115,6 +115,8 @@ const TechnologyIcon = ({ technology }) => {
             return <SiRedis size={24} className="technology-icon" />;
         case "Postgre":
             return <SiPostgresql size={24} className="technology-icon" />;
+        case "Kafka":
+            return <SiApachekafka size={24} className="technology-icon" />;
         default:
             return null;
     }

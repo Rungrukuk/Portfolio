@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style/Skills.css';
 import { Row, Col } from "react-bootstrap";
 import { FaPython, FaJava, FaPhp, FaHtml5, FaCss3, FaJsSquare, FaDocker, FaLinux, FaGitAlt } from 'react-icons/fa';
-import { SiDjango, SiMysql, SiSqlite, SiMongodb, SiPostman, SiJupyter, SiUnity, SiUnrealengine, SiPandas, SiSharp, SiRabbitmq, SiApachekafka } from 'react-icons/si';
+import { SiDjango, SiMysql, SiSqlite, SiMongodb, SiPostman, SiJupyter, SiUnity, SiUnrealengine, SiPandas, SiSharp, SiRabbitmq, SiApachekafka, SiSpring, SiRsocket } from 'react-icons/si';
 import { getLeetCodeStats, getAllGitHubCommits } from '../fetchData';
 
 const Skills = React.forwardRef((props, ref) => {
@@ -78,9 +78,9 @@ const Skills = React.forwardRef((props, ref) => {
                         <div className="skills-item">
                             <h4 className='text-light-green'>Programming Languages:</h4>
                             <div className='skill-icons'>
-                                <FaPython size={30} className='mr-3' />
                                 <FaJava size={30} className='mr-3' />
                                 <SiSharp size={30} className='mr-3' />
+                                <FaPython size={30} className='mr-3' />
                                 <FaPhp size={30} className='mr-3' />
                                 <FaJsSquare size={30} className='mr-3' />
                                 <FaHtml5 size={30} className='mr-3' />
@@ -92,7 +92,9 @@ const Skills = React.forwardRef((props, ref) => {
                         <div className="skills-item">
                             <h4 className='text-light-green'>Developer Tools:</h4>
                             <div className='skill-icons'>
+                                <SiSpring size={30} className='mr-3' />
                                 <SiDjango size={30} className='mr-3' />
+                                <SiRsocket size={30} className='mr-3' />
                                 <SiMysql size={30} className='mr-3' />
                                 <SiSqlite size={30} className='mr-3' />
                                 <SiMongodb size={30} className='mr-3' />
