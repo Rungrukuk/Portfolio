@@ -13,7 +13,7 @@ import Microservices from "../assets/img/projects/Microservices.png";
 
 const projectsData = [
     {
-        title: "Microservices Platform",
+        title: "Reactive Microservices Platform",
         link: "https://github.com/Rungrukuk/Reactive-Microservices-Platform",
         image: Microservices,
         description: "Developed a microservice-architected platform using SpringBoot on Java",
