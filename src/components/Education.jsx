@@ -40,7 +40,7 @@ const Education = React.forwardRef((props, ref) => (
                         </Col>
 
                         <Col md={2} className="d-flex align-items-center justify-content-center">
-                            <Image src={logoAzTU} className="institution-logo" />
+                            <Image src={logoAzTU} alt="Azerbaijan technical University" className="institution-logo" />
                         </Col>
                     </Row>
                 </div>
@@ -74,7 +74,7 @@ const Education = React.forwardRef((props, ref) => (
                         </Col>
 
                         <Col md={2} className="d-flex align-items-center justify-content-center">
-                            <Image src={logoBEU} className="institution-logo" />
+                            <Image src={logoBEU} alt="Baku Engineering University" className="institution-logo" />
                         </Col>
                     </Row>
                 </div>
