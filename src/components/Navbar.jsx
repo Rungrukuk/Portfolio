@@ -1,5 +1,5 @@
 import React from 'react';
-import profileImage from "../assets/img/ProfileImg.jpg";
+import profileImage from "../assets/img/ProfileImg.png";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/Navbar.css'
 
@@ -33,6 +33,12 @@ const Navbar = ({ selectedSection, handleScrollTo, refs }) => {
                     onClick={() => handleScrollTo(refs.skills, 'skills')}
                 >
                     Skills
+                </div>
+                                <div
+                    className={`menu-item p-3 text-center ${selectedSection === 'publications' ? 'bg-primary text-white' : 'bg-dark text-white'}`}
+                    onClick={() => handleScrollTo(refs.publications, 'publications')}
+                >
+                    Publications
                 </div>
                 <div
                     className={`menu-item p-3 text-center ${selectedSection === 'projects' ? 'bg-primary text-white' : 'bg-dark text-white'}`}

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Education from './components/Education';
 import Skills from './components/Skills';
+import Publications from './components/Publications';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
@@ -14,6 +15,7 @@ function App() {
   const aboutRef = useRef(null);
   const educationRef = useRef(null);
   const skillsRef = useRef(null);
+  const publicationsRef = useRef(null);
   const projectsRef = useRef(null);
   const contactRef = useRef(null);
   const experienceRef = useRef(null);
@@ -23,6 +25,7 @@ function App() {
     experience: experienceRef,
     education: educationRef,
     skills: skillsRef,
+    publications: publicationsRef,
     projects: projectsRef,
     contact: contactRef,
   }), [aboutRef, experienceRef, educationRef, skillsRef, projectsRef, contactRef]);
@@ -87,10 +90,13 @@ function App() {
           <div ref={skillsRef} data-section="skills" className='bg-dark-2'>
             <Skills scrollToSection={handleScrollTo} />
           </div>
-          <div ref={projectsRef} data-section="projects" className='bg-dark-1'>
+          <div ref={publicationsRef} data-section="publications" className='bg-dark-1'>
+            <Publications scrollToSection={handleScrollTo} />
+          </div>
+          <div ref={projectsRef} data-section="projects" className='bg-dark-2'>
             <Projects scrollToSection={handleScrollTo} />
           </div>
-          <div ref={contactRef} data-section="contact" className='bg-dark-2'>
+          <div ref={contactRef} data-section="contact" className='bg-dark-1'>
             <Contact scrollToSection={handleScrollTo} />
           </div>
           <div className='bg-dark-1'>
